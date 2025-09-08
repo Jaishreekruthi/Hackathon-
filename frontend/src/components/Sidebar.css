@@ -1,0 +1,129 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #a8dadc; /* Soft Teal */
+  color: #1d3557;
+  padding: 16px 8px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+.sidebar.expanded {
+  width: 220px;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Sidebar title */
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+}
+.sidebar-title.hidden {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d3557;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background: #f67280;
+  color: white;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* Toggle button */
+.sidebar-toggle {
+  align-self: flex-end;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: #1d3557;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+/* Toggle button */
+.sidebar-toggle {
+  align-self: flex-end;
+  font-size: 24px;        /* increase icon size */
+  background: #1d3557;    /* dark navy */
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px 14px;     /* bigger clickable area */
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  transform: scale(1.1);
+  background: #457b9d;   /* lighter navy on hover */
+}
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1d3557;
+  text-decoration: none;
+  font-size: 18px;       /* ⬆ bigger font */
+  font-weight: 600;      /* ⬆ bold text */
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #f67280;
+  color: white;
+  transform: translateX(4px); /* smooth hover slide */
+}
+
+.icon {
+  font-size: 22px;       /* ⬆ bigger emoji */
+}
+

@@ -1,0 +1,129 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #a8dadc, #457b9d); /* Soft Teal gradient */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  background: #f8f9fa; /* Light Gray */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.8s ease-in;
+}
+
+.login-box h2 {
+  text-align: center;
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.login-box label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #333;
+}
+
+.login-box input[type="email"],
+.login-box input[type="password"],
+.login-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.toggle-password {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #555;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #ff7f7f; /* Coral */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #f67280; /* Soft Pink */
+}
+
+.error {
+  color: #e63946;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #ff7f7f;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Forgot Password */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.forgot-password a {
+  font-size: 13px;
+  color: #ff7f7f;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Error Animation */
+.error {
+  color: #e63946;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  animation: shakeFade 0.4s ease;
+}
+
+@keyframes shakeFade {
+  0% { transform: translateX(0); opacity: 0.8; }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); opacity: 1; }
+}
